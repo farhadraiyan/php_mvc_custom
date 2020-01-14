@@ -1,0 +1,13 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+#The below command will not work
+#RewriteRule ^ index.php [QSA, L]
+
+#Need to use this
+#RewriteRule ^(.+)$index.php?url=$1 [QSA,L]
+
+# This command is perfect, it will redirect all request to index.php
+RewriteRule ^((?!index\.php).+)$ /index.php [L]
