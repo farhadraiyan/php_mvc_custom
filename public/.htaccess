@@ -1,5 +1,6 @@
-RewriteEngine On
 
+RewriteEngine On
+#RewriteBase /php_mvc_custom/public
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-l
@@ -10,4 +11,4 @@ RewriteCond %{REQUEST_FILENAME} !-l
 #RewriteRule ^(.+)$index.php?url=$1 [QSA,L]
 
 # This command is perfect, it will redirect all request to index.php
-RewriteRule ^((?!index\.php).+)$ /index.php [L]
+#RewriteRule ^((?!index\.php).+)$ /index.php [L]

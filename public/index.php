@@ -13,8 +13,10 @@ set_include_path(get_include_path() . PATH_SEPARATOR . implode(PATH_SEPARATOR, $
 
 //var_dump(get_include_path());
 
+//This autoloader will load all the class in this project
 spl_autoload_register('spl_autoload', false);
 
 #var_dump($_SERVER['REQUEST_URI']);
 
+//cretting the application
 new Application();
